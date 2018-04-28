@@ -1,0 +1,15 @@
+<form #form="ngForm" (ngSubmit)="processForm(form)"
+    fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="2vw">
+
+  <mat-icon>search</mat-icon>
+
+  <mat-form-field fxFlex="1 1 auto">
+    <input type="text" name="searchText" placeholder="Search string"
+           ngModel required minlength="3" matInput>
+  </mat-form-field>
+
+  <button type="submit" [disabled]="form.invalid" mat-raised-button color="accent">
+    Search
+  </button>
+
+</form>

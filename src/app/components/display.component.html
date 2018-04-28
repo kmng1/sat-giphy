@@ -1,0 +1,14 @@
+<div fxLayout="column" fxLayoutAlign="start" fxLayoutGap="2vh">
+  <mat-card *ngFor="let l of list">
+
+    <mat-card-header>
+      <img *ngIf="l.avatar" [src]="l.avatar" mat-card-avatar>
+      <mat-card-title>{{ l.title }}</mat-card-title>
+      <mat-card-subtitle *ngIf="l.name">{{ l.name }}</mat-card-subtitle>
+    </mat-card-header>
+
+    <img mat-card-image [src]="l.url" alt="">
+
+  </mat-card>
+</div>
+
